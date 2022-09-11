@@ -10,6 +10,11 @@ nltk = "*"
 scikit-learn = "*"
 mlflow = "*"
 hyperopt = "*"
+prefect = "==2.3.1"
+scipy = "*"
+matplotlib = "*"
+flask = "*"
+evidently = "===0.1.23.dev0"
 
 [dev-packages]
 
