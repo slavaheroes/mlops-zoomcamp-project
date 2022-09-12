@@ -1,16 +1,14 @@
 import pickle
-import yaml
 import os
 import nltk
 nltk.download('stopwords')
 
 
-with open("config.yaml", "r") as f:
-    config = yaml.safe_load(f)
+ARTIFACT_PATH = "artifacts"
 
 def save_artifact(artifact, name):
-    os.makedirs(config["ARTIFACT_PATH"], exist_ok=True)
-    path = os.path.join(config["ARTIFACT_PATH"], name)
+    os.makedirs(ARTIFACT_PATH, exist_ok=True)
+    path = os.path.join(ARTIFACT_PATH, name)
     with open(path, "wb") as file:
         pickle.dump(artifact, file)
     return path

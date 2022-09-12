@@ -15,6 +15,7 @@ scipy = "*"
 matplotlib = "*"
 flask = "*"
 evidently = "===0.1.23.dev0"
+pytest = "*"
 
 [dev-packages]
 

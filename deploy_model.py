@@ -4,10 +4,11 @@ import nltk
 from nltk.corpus import stopwords
 import re
 import os
-from utils import config, load_artifact
+from utils import load_artifact
 from evidently.dashboard import Dashboard
 from evidently.tabs import DataDriftTab
 
+OUTPUT_PATH = "predictions"
 
 app = Flask(__name__, template_folder='./templates')
 
@@ -45,8 +46,8 @@ def update_monitor(dataframe_path):
 
 
 def write_prediction(req, res):
-    os.makedirs(config['OUTPUT_PATH'], exist_ok=True)
-    path = os.path.join(config['OUTPUT_PATH'], "outputs.csv")
+    os.makedirs(OUTPUT_PATH, exist_ok=True)
+    path = os.path.join(OUTPUT_PATH, "outputs.csv")
     try:
         items = pd.read_csv(path).to_dict('records')
     except:

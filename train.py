@@ -18,11 +18,11 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score
 
-from utils import config, save_artifact
+from utils import save_artifact
 
-ARTIFACT_PATH = config['ARTIFACT_PATH']
-EXP_NAME = config['EXP_NAME']
-MODEL_NAME = config['MODEL_NAME']
+ARTIFACT_PATH = "artifacts"
+EXP_NAME = "logistic-regression"
+MODEL_NAME =  "fake-detector"
 
 import mlflow
 from mlflow.tracking import MlflowClient

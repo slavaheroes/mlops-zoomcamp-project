@@ -1,5 +1,0 @@
-ARTIFACT_PATH: "artifacts"
-EXP_NAME: "logistic-regression"
-MODEL_NAME: "fake-detector"
-OUTPUT_PATH: "predictions"
-SERVICE_URL: "http://127.0.0.1:9000/"

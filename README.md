@@ -76,12 +76,12 @@ It supports two simple routes:
  - For monitoring, I used **evidently** to analyze data drift. It has a basic functionality, so it just calculates metrics and saves report in html format so we can see it in the browser. For details, take a look at  **deploy_model.py** 
  - [Reproducibility](#reproducibility). If you have some problems with the instructions, contact me on [telegram](https://t.me/slavaheroes) or on slack of DataTalksClub (@Slava Shen).
 - Best practices:
-	- [x] Unit tests: 
-	- [ ] Integration tests:
-	- [x] Linter or Code formatter:
-	- [x] Makefile: exists
-	- [x] Pre-commit hooks:
-	- [ ] CI/CD: 
+	- [x] Unit tests
+	- [ ] Integration tests
+	- [x] Linter or Code formatter
+	- [x] Makefile
+	- [x] Pre-commit hooks
+	- [ ] CI/CD
 
 
 ### Updated on September 12, 2022.
