@@ -1,6 +1,5 @@
 *csv
 playground.ipynb
-artifacts
 mlruns
 mlflow.db
 .DS_Store

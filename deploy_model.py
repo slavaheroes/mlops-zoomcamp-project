@@ -12,9 +12,22 @@ OUTPUT_PATH = "predictions"
 
 app = Flask(__name__, template_folder='./templates')
 
-stemmer = load_artifact("artifacts/PortStemmer.pickle")
-vectorizer = load_artifact("artifacts/vectorizer.pickle")
-model = load_artifact("artifacts/model.pickle")
+try:
+    stemmer = load_artifact("artifacts/PortStemmer.pickle")
+    vectorizer = load_artifact("artifacts/vectorizer.pickle")
+    model = load_artifact("artifacts/model.pickle")
+except:
+    print("[X] Error while loading")
+    from nltk.stem.porter import PorterStemmer
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    stemmer = PorterStemmer()
+    vectorizer = TfidfVectorizer()
+    model = LogisticRegression()
+
+
+
 
 def stemming(content, port_stem):
     stemmed_content = re.sub('[^a-zA-Z]',' ',content)
