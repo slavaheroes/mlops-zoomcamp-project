@@ -5,7 +5,7 @@ RUN pip install pipenv
 
 COPY templates/ templates/
 COPY artifacts/ artifacts/
-COPY ["config.yaml", "utils.py", "./"]
+COPY ["utils.py", "./"]
 
 COPY ["Pipfile", "Pipfile.lock", "./"]
 RUN pipenv install --system --deploy
