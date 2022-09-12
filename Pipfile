@@ -16,7 +16,9 @@ matplotlib = "*"
 flask = "*"
 evidently = "===0.1.23.dev0"
 pytest = "*"
-dataclasses = "*"
+pylint = "==2.14.4"
+black = "*"
+isort = "*"
 
 [dev-packages]
 

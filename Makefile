@@ -8,6 +8,10 @@ simulate:
 train:
 	python train.py
 
+tests:
+	pytest tests/test_train.py
+	pytest tests/test_app.py
+
 mlflow:
 	mlflow ui --backend-store-uri sqlite:///mlflow.db --port 6677 --host localhost
 

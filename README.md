@@ -62,6 +62,8 @@ It supports two simple routes:
 4. Enter `make train` command. You might open **mlflow** and **prefect** on localhost to view training logs, parameteres, etc. 
 	> Reminder: MLFlow is operating on 6677 port of localhost.
 
+	- At this point, you can also run some tests before deploying model. `make tests`
+
 5. At this point, we want to deploy our model. Type `make deploy` . It will build a docker image and run docker container that will operate the **Flask** server described above.
 6. After that, I want to simulate traffic by sending test cases from **`data/test.csv`**  by one to the server. To do so, type `make simulate`
 7. Now you can check `localhost:9000` and `localhost:9000/monitor` to see the simple form for POST request and **evidently report** respectively.
