@@ -1,5 +1,7 @@
 from nltk.stem.porter import PorterStemmer
+
 import deploy_model
+
 
 def test_stemming():
     stemmer = PorterStemmer()
@@ -8,11 +10,12 @@ def test_stemming():
     expected_output = "david streitfeld specter trump loosen tongu purs string silicon valley new york time"
     assert output == expected_output
 
+
 def test_make_prediction():
     test_data = {
         "author": "David Streitfeld",
         "title": "Specter of Trump Loosens Tongues, if Not Purse Strings, in Silicon Valley - The New York Times",
-        "text": "no text"
+        "text": "no text",
     }
 
     response = deploy_model.make_prediction(test_data)

@@ -19,6 +19,7 @@ pytest = "*"
 pylint = "==2.14.4"
 black = "*"
 isort = "*"
+pre-commit = "*"
 
 [dev-packages]
 
